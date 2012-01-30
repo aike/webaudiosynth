@@ -32,7 +32,7 @@ $(function() {
 
 	$('<img />').switch({
 		id: 'play_button', image: 'images/play_button.png',
-		left: 350, top: 480, width: 36, height: 36, value: 0,
+		left: 350, top: 500, width: 36, height: 36, value: 0,
 		click: (function() { seq(0);} )
 	}).appendTo('#draw');
 
