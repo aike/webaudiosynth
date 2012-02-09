@@ -1,13 +1,13 @@
 
-       WebSynth - Web browser based synthesizer application
+       WebAudioSynth - Web browser based synthesizer application
 
 1. DESCRIPTION
-  WebSynth is an analog style synthsizer application. It is all written 
+  WebAudioSynth is an analog style synthsizer application. It is all written 
   in JavaScript using Web Audio API.
   http://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html
 
 2. SYSTEM REQUIREMENT
-  WebSynth requires Google Chrome 16 or later.
+  WebAudioSynth requires Google Chrome 16 or later.
 
 3. WEBSITE
   http://aikelab.net/websynth/
@@ -16,8 +16,8 @@
   http://www.youtube.com/watch?v=QhcG_Q0MIeg
 
 5. CREDIT
-  WebSynth program is licenced under MIT License.
-  GitHub: http://github.com/aike/websynth
+  WebAudioSynth program is licenced under MIT License.
+  GitHub: http://github.com/aike/WebAudioSynth
   Programming and GUI Design: aike (http://soundfrostmusic.com/)
   Contact: twitter @aike1000
 
