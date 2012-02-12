@@ -17,7 +17,7 @@
 
 5. CREDIT
   WebAudioSynth program is licenced under MIT License.
-  GitHub: http://github.com/aike/WebAudioSynth
+  GitHub: http://github.com/aike/webaudiosynth
   Programming and GUI Design: aike (http://soundfrostmusic.com/)
   Contact: twitter @aike1000
 
