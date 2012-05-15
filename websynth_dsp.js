@@ -367,7 +367,7 @@ CTL_Filter.prototype.getnode = function() {
 ///////////// SYNTH MAIN /////////////////////
 var WebSynth = function() {
     this.context = new webkitAudioContext();
-    this.root = this.context.createJavaScriptNode(stream_length, 1, 1);
+    this.root = this.context.createJavaScriptNode(stream_length, 1, 2);
 	this.vco1 = new VCO(this.context.sampleRate);
 	this.vco2 = new VCO(this.context.sampleRate);
 	this.eg = new EG();
