@@ -16,8 +16,8 @@
   http://www.youtube.com/watch?v=QhcG_Q0MIeg
 
 5. CREDIT
-  WebAudioSynth program is licenced under MIT License.
+  WebAudioSynth program is licensed under MIT License.
   GitHub: http://github.com/aike/webaudiosynth
-  Programming and GUI Design: aike (http://soundfrostmusic.com/)
+  Programming and GUI Design: aike
   Contact: twitter @aike1000
 
