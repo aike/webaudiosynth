@@ -8,12 +8,15 @@
 
 ///////////// BROWSER CHECK /////////////////////
 window.addEventListener('load', init, false);
+var p;
 function init() {
-	try {
-		var context = new webkitAudioContext();
-	} catch(e) {
-		alert('Web Audio API is not supported in this browser');
-	}
+//	try {
+//		window.AudioContext = window.webkitAudioContext || window.AudioContext;
+//		var context = new AudioContext();
+//		p = new WebSynth(context);
+//	} catch(e) {
+//		alert('Web Audio API is not supported in this browser');
+//	}
 };
 
 ///////////// GLIDE /////////////////////
@@ -266,7 +269,7 @@ EG.prototype.next = function() {
 
 ///////////// VOLUME /////////////////////
 var CTL_Volume = function(ctx) {
-	this.volume = ctx.createGainNode();
+	this.volume = ctx.createGain();
     this.volume.gain.value = 0.5;
 };
 
@@ -286,10 +289,10 @@ CTL_Volume.prototype.getnode = function() {
 var FX_Delay = function(ctx) {
 	this.wet = 0.2;
 	this.delaytime = 0.8;
-    this.delay1 = ctx.createDelayNode();
-    this.delay2 = ctx.createDelayNode();
-	this.gain1 = ctx.createGainNode();
-	this.gain2 = ctx.createGainNode();
+    this.delay1 = ctx.createDelay();
+    this.delay2 = ctx.createDelay();
+	this.gain1 = ctx.createGain();
+	this.gain2 = ctx.createGain();
 
     this.delay1.delayTime.value = this.delaytime * 0.5;
     this.delay2.delayTime.value = this.delaytime * 1.0;
@@ -327,7 +330,7 @@ var CTL_Filter = function(ctx) {
 	this.amount = 0.5;
 	this.freq = Math.min(100, this.base_freq + this.eg * this.amount * 100);
     this.lowpass = ctx.createBiquadFilter();
-	this.lowpass.type = 0;
+	this.lowpass.type = 'lowpass';
 	this.lowpass.frequency.value = 300 + Math.pow(2.0, (this.freq + 30) / 10);
 	this.lowpass.Q.value = 50 / 5;
 };
@@ -366,8 +369,9 @@ CTL_Filter.prototype.getnode = function() {
 
 ///////////// SYNTH MAIN /////////////////////
 var WebSynth = function() {
-    this.context = new webkitAudioContext();
-    this.root = this.context.createJavaScriptNode(stream_length, 1, 2);
+	window.AudioContext = window.webkitAudioContext || window.AudioContext;
+	this.context = new AudioContext();
+    this.root = this.context.createScriptProcessor(stream_length, 1, 2);
 	this.vco1 = new VCO(this.context.sampleRate);
 	this.vco2 = new VCO(this.context.sampleRate);
 	this.eg = new EG();
@@ -384,7 +388,6 @@ var WebSynth = function() {
 	this.volume.connect(this.delay.getnode2());
 	this.delay.connect(this.context.destination);
 
-
 /*
 	root -> filter -> volume -> dest
                              -> delay.node1 -> dest
@@ -393,7 +396,13 @@ var WebSynth = function() {
 
 };
 
+
+
 WebSynth.prototype.play = function(n) {
+	if(this.context.state === 'suspended') {
+		this.context.resume();
+	}
+
 	this.eg.note_on();
 	this.feg.note_on();
     var f1 = Math.pow(2.0, (this.vco1.oct + n - 4 + this.vco1.fine) / 12.0);
@@ -430,5 +439,5 @@ WebSynth.prototype.stop = function() {
 	this.feg.note_off();
 };
 
-var p = new WebSynth();
+p = new WebSynth();
 
