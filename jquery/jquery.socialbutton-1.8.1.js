@@ -1,11 +1,11 @@
 /**
  * jquery.socialbutton - jQuery plugin for social networking websites
- * http://itra.jp/jquery_socialbutton_plugin/
+ * https://itra.jp/jquery_socialbutton_plugin/
  * 
- * Copyright 2010, Itrans, Inc. http://itra.jp/
+ * Copyright 2010, Itrans, Inc. https://itra.jp/
  * 
  * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
+ * https://jquery.org/license
  * 
  * Version: 1.8.1
  */
@@ -15,7 +15,7 @@
  * 
  * 
  * mixi_check
- * http://developer.mixi.co.jp/connect/mixi_plugin/mixi_check/spec_mixi_check
+ * https://developer.mixi.co.jp/connect/mixi_plugin/mixi_check/spec_mixi_check
  * 
  * $('#mixi_check').socialbutton('mixi_check', {
  *     key: 'mixi-check-key'
@@ -24,12 +24,12 @@
  * $('#mixi_check').socialbutton('mixi_check', {
  *     key: 'mixi-check-key',
  *     button: 'button-1',
- *     url: 'http://itra.jp/'
+ *     url: 'https://itra.jp/'
  * });
  * 
  * 
  * mixi_like
- * http://developer.mixi.co.jp/connect/mixi_plugin/favorite_button/spec
+ * https://developer.mixi.co.jp/connect/mixi_plugin/favorite_button/spec
  * 
  * $('#mixi_like').socialbutton('mixi_like', {
  *     key: 'mixi-check-key',
@@ -37,7 +37,7 @@
  * 
  * $('#mixi_like').socialbutton('mixi_like', {
  *     key: 'mixi-check-key',
- *     url: 'http://itra.jp/',
+ *     url: 'https://itra.jp/',
  *     width: 450,
  *     height: 80,
  *     show_faces: true,
@@ -46,13 +46,13 @@
  * 
  * 
  * facebook_like
- * http://developers.facebook.com/docs/reference/plugins/like
+ * https://developers.facebook.com/docs/reference/plugins/like
  * 
  * $('#facebook_like').socialbutton('facebook_like');
  * 
  * $('#facebook_like').socialbutton('facebook_like', {
  *     button: 'standard', // synonym 'layout'
- *     url: 'http://itra.jp',
+ *     url: 'https://itra.jp',
  *     show_faces: true,
  *     width: 450,
  *     height: 80,
@@ -64,25 +64,25 @@
  * 
  * 
  * facebook_share
- * http://developers.facebook.com/docs/share
+ * https://developers.facebook.com/docs/share
  * 
  * $('#facebook_share').socialbutton('facebook_share');
  * 
  * $('#facebook_share').socialbutton('facebook_share', {
  *     button: 'button_count', // synonym 'type'
- *     url: 'http://itra.jp',
+ *     url: 'https://itra.jp',
  *     text: 'Share'
  * });
  * 
  * 
  * Twitter
- * http://twitter.com/goodies/tweetbutton
+ * https://twitter.com/goodies/tweetbutton
  * 
  * $('#twitter').socialbutton('twitter');
  * 
  * $('#twitter').socialbutton('twitter', {
  *     button: 'vertical', // synonym 'count'
- *     url: 'http://itra.jp/',
+ *     url: 'https://itra.jp/',
  *     text: 'tweet text',
  *     lang: 'ja',
  *     via: 'ishiiyoshinori',
@@ -91,26 +91,26 @@
  * 
  * 
  * GREE Social Feedback
- * http://developer.gree.co.jp/connect/plugins/sf
+ * https://developer.gree.co.jp/connect/plugins/sf
  * 
  * $('#gree_sf').socialbutton('gree_sf');
  * 
  * $('#gree_sf').socialbutton('gree_sf', {
  *     button: 0, // synonym 'type'
- *     url: 'http://itra.jp/',
+ *     url: 'https://itra.jp/',
  *     width: 0, // auto
  *     height: 20
  * });
  * 
  * 
  * Evernote Site Memory
- * http://www.evernote.com/about/developer/sitememory/
+ * https://www.evernote.com/about/developer/sitememory/
  * 
  * $('#evernote').socialbutton('evernote');
  * 
  * $('#evernote').socialbutton('evernote', {
  *     button: 'article-clipper',
- *     url: 'http://itra.jp/',
+ *     url: 'https://itra.jp/',
  *     provider_name: 'itra.jp',
  *     suggest_notebook: 'webclip',
  *     content_id: 'element-id-to-clip',
@@ -122,38 +122,38 @@
  * 
  * 
  * Hatena Bookmark
- * http://b.hatena.ne.jp/
+ * https://b.hatena.ne.jp/
  * 
  * $('#hatena').socialbutton('hatena');
  * 
  * $('#hatena').socialbutton('hatena', {
  *     button: 'standard',
- *     url: 'http://itra.jp/',
+ *     url: 'https://itra.jp/',
  *     title: 'page-title'
  * });
  * 
  * 
  * Hatena Bookmark (Old Style)
- * http://b.hatena.ne.jp/
+ * https://b.hatena.ne.jp/
  * 
  * $('#hatena').socialbutton('hatena_oldstyle');
  * 
  * $('#hatena').socialbutton('hatena_oldstyle', {
  *     button: '/path/to/your-icon.png',
- *     url: 'http://itra.jp/',
+ *     url: 'https://itra.jp/',
  *     padding: 10,
  *     height: 15
  * });
  * 
  * 
  * Google +1 Button
- * http://www.google.com/webmasters/+1/button/
+ * https://www.google.com/webmasters/+1/button/
  * 
  * $('#google').socialbutton('google_plusone');
  * 
  * $('#google').socialbutton('google_plusone', {
  *     button: 'standard', // synonym 'size'
- *     url: 'http://itra.jp', // synonym 'href'
+ *     url: 'https://itra.jp', // synonym 'href'
  *     lang: 'ja',
  *     parsetags: 'explicit',
  *     callback: 'some_callback_function',
@@ -262,7 +262,7 @@ $.fn.socialbutton = function(service, options) {
 			title: document.title
 		},
 		hatena_oldstyle: {
-			button: 'http://d.hatena.ne.jp/images/b_append.gif',
+			button: 'https://d.hatena.ne.jp/images/b_append.gif',
 			url: document.URL,
 			height: 13,
 			padding: 7
@@ -346,12 +346,12 @@ function socialbutton_mixi_check(target, options, defaults, index, max_index)
 		'data-button': button
 	});
 
-	var tag = '<a href="http://mixi.jp/share.pl" class="mixi-check-button"' + attr + '>Check</a>';
+	var tag = '<a href="https://mixi.jp/share.pl" class="mixi-check-button"' + attr + '>Check</a>';
 
 	$(target).html(tag);
 
 	if (index == max_index) {
-		$('body').append('<script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script>');
+		$('body').append('<script type="text/javascript" src="https://static.mixi.jp/js/share.js"></script>');
 	}
 }
 
@@ -395,7 +395,7 @@ function socialbutton_mixi_like(target, options, defaults, index, max_index)
 	});
 
 	var attr = merge_attributes({
-		src: 'http://plugins.mixi.jp/favorite.pl?' + params,
+		src: 'https://plugins.mixi.jp/favorite.pl?' + params,
 		scrolling: 'no',
 		frameborder: '0',
 		allowTransparency: 'true',
@@ -476,7 +476,7 @@ function socialbutton_facebook_like(target, options, defaults, index, max_index)
 		'height': height
 	});
 
-	var tag = '<iframe src="http://www.facebook.com/plugins/like.php?' + params + '" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:' + width + 'px; height:' + height + 'px;" allowTransparency="true"></iframe>';
+	var tag = '<iframe src="https://www.facebook.com/plugins/like.php?' + params + '" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:' + width + 'px; height:' + height + 'px;" allowTransparency="true"></iframe>';
 
 	$(target).html(tag);
 }
@@ -495,7 +495,7 @@ function socialbutton_facebook_share(target, options, defaults, index, max_index
 	var tag = '<a name="fb_share"' + attr + '>' + text + '</a>';
 
 	if(index == 0) {
-		tag += '<script type="text/javascript" src="http://static.ak.fbcdn.net/connect.php/js/FB.Share"></script>';
+		tag += '<script type="text/javascript" src="https://static.ak.fbcdn.net/connect.php/js/FB.Share"></script>';
 	}
 
 	$(target).html(tag);
@@ -520,12 +520,12 @@ function socialbutton_twitter(target, options, defaults, index, max_index)
 		'data-related': related
 	});
 
-	var tag = '<a href="http://twitter.com/share" class="twitter-share-button"' + attr + '>Tweet</a>';
+	var tag = '<a href="https://twitter.com/share" class="twitter-share-button"' + attr + '>Tweet</a>';
 
 	$(target).html(tag);
 
 	if (index == max_index) {
-		$('body').append('<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>');
+		$('body').append('<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>');
 	}
 }
 
@@ -575,7 +575,7 @@ function socialbutton_gree_sf(target, options, defaults, index, max_index)
 		'height': height
 	});
 
-	var tag = '<iframe src="http://share.gree.jp/share?' + params + '" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" style="border:none; overflow:hidden; width:' + width + 'px; height:' + height + 'px;" allowTransparency="true"></iframe>';
+	var tag = '<iframe src="https://share.gree.jp/share?' + params + '" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" style="border:none; overflow:hidden; width:' + width + 'px; height:' + height + 'px;" allowTransparency="true"></iframe>';
 
 	$(target).html(tag);
 }
@@ -606,7 +606,7 @@ function socialbutton_evernote(target, options, defaults, index, max_index)
 		button == 'site-mem-22' ||
 		button == 'site-mem-16'
 		) {
-			button = 'http://static.evernote.com/' + button + '.png';
+			button = 'https://static.evernote.com/' + button + '.png';
 	}
 
 	var clipoptions = {
@@ -621,7 +621,7 @@ function socialbutton_evernote(target, options, defaults, index, max_index)
 	};
 
 	if (index == 0) {
-		$('body').append('<script type="text/javascript" src="http://static.evernote.com/noteit.js"></script>');
+		$('body').append('<script type="text/javascript" src="https://static.evernote.com/noteit.js"></script>');
 	}
 
 	var tag = $(document.createElement('a'))
@@ -647,15 +647,15 @@ function socialbutton_hatena(target, options, defaults, index, max_index)
 	title = htmlspecialchars(title);
 
 	var attr = merge_attributes({
-		'href': 'http://b.hatena.ne.jp/entry/' + url,
+		'href': 'https://b.hatena.ne.jp/entry/' + url,
 		'class': 'hatena-bookmark-button',
 		'data-hatena-bookmark-title': title,
 		'data-hatena-bookmark-layout': layout,
 		'title': 'このエントリーをはてなブックマークに追加'
 	});
 	
-	var tag = '<a' + attr + '><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>'
-			+ '<script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>';
+	var tag = '<a' + attr + '><img src="https://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>'
+			+ '<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>';
 
 	$(target).html(tag);
 }
@@ -671,8 +671,8 @@ function socialbutton_hatena_oldstyle(target, options, defaults, index, max_inde
 	url = htmlspecialchars(url);
 
 	var tag = '<span style="font-size: ' + height + 'px; line-height: 100%; ">'
-			+ '<span style="padding-right: ' + padding + 'px"><a href="http://b.hatena.ne.jp/entry/add/' + url + '" target="_blank"><img src="' + button + '" style="border: none; vertical-align: text-bottom" /></a></span>'
-			+ '<a href="http://b.hatena.ne.jp/entry/' + url + '" target="_blank"><img src="http://b.hatena.ne.jp/entry/image/' + url + '" style="border: none; vertical-align: text-bottom" /></a>'
+			+ '<span style="padding-right: ' + padding + 'px"><a href="https://b.hatena.ne.jp/entry/add/' + url + '" target="_blank"><img src="' + button + '" style="border: none; vertical-align: text-bottom" /></a></span>'
+			+ '<a href="https://b.hatena.ne.jp/entry/' + url + '" target="_blank"><img src="https://b.hatena.ne.jp/entry/image/' + url + '" style="border: none; vertical-align: text-bottom" /></a>'
 			+ '</span>';
 
 	$(target).html(tag);
